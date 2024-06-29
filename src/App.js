@@ -2,43 +2,51 @@ import React, { useState, useEffect } from 'react';
 import topicsData from './topicsData.json';
 
 const LanguageExchangeApp = () => {
-  const [categories, setCategories] = useState({});
-  const [levels, setLevels] = useState({});
-  const [isKoreanMode, setIsKoreanMode] = useState(false);
+  const [selectedLevel, setSelectedLevel] = useState(() => {
+    const storedLevel = localStorage.getItem('selectedLevel');
+    return storedLevel === "null" ? null : storedLevel;
+  });
+  const [categories, setCategories] = useState(() => {
+    const savedCategories = localStorage.getItem('categories');
+    return savedCategories ? JSON.parse(savedCategories) : {};
+  });
+  const [isKoreanMode, setIsKoreanMode] = useState(() => {
+    return localStorage.getItem('isKoreanMode') === 'true';
+  });
   const [currentTopic, setCurrentTopic] = useState(null);
   const [showTranslation, setShowTranslation] = useState(false);
 
   useEffect(() => {
-    const initCategories = {};
-    const initLevels = {};
-    Object.keys(topicsData).forEach(level => {
-      initLevels[level] = true;
-      topicsData[level].forEach(topic => {
-        initCategories[topic.category] = true;
+    if (selectedLevel) {
+      const initCategories = {};
+      topicsData[selectedLevel].forEach(topic => {
+        initCategories[topic.category] = categories[topic.category] ?? true;
       });
-    });
-    setCategories(initCategories);
-    setLevels(initLevels);
-  }, []);
+      setCategories(initCategories);
+    }
+  }, [selectedLevel]);
+
+  useEffect(() => {
+    localStorage.setItem('selectedLevel', selectedLevel);
+    localStorage.setItem('categories', JSON.stringify(categories));
+    localStorage.setItem('isKoreanMode', isKoreanMode);
+  }, [selectedLevel, categories, isKoreanMode]);
 
   const toggleCategory = (category) => {
     setCategories(prev => ({ ...prev, [category]: !prev[category] }));
   };
 
-  const toggleLevel = (level) => {
-    setLevels(prev => ({ ...prev, [level]: !prev[level] }));
-  };
-
   const getRandomTopic = () => {
-    const filteredTopics = Object.keys(topicsData)
-      .filter(level => levels[level])
-      .flatMap(level => topicsData[level].filter(topic => categories[topic.category]));
+    const selectedCategories = Object.entries(categories)
+      .filter(([_, isSelected]) => isSelected)
+      .map(([category]) => category);
 
-    if (filteredTopics.length === 0) return null;
+    if (selectedCategories.length === 0) return null;
 
-    const randomTopic = filteredTopics[Math.floor(Math.random() * filteredTopics.length)];
-    const randomQuestion = randomTopic.questions[Math.floor(Math.random() * randomTopic.questions.length)];
-    return { ...randomQuestion, category: randomTopic.category, vocabulary: randomTopic.koreanVocabulary };
+    const randomCategory = selectedCategories[Math.floor(Math.random() * selectedCategories.length)];
+    const categoryTopics = topicsData[selectedLevel].find(t => t.category === randomCategory);
+    const randomQuestion = categoryTopics.questions[Math.floor(Math.random() * categoryTopics.questions.length)];
+    return { ...randomQuestion, category: randomCategory, vocabulary: categoryTopics.koreanVocabulary };
   };
 
   const handleNewTopic = () => {
@@ -47,41 +55,23 @@ const LanguageExchangeApp = () => {
   };
 
   return (
-    <div style={{ padding: '1rem', maxWidth: '1000px', margin: '0 auto' }}>
+    <div style={{ padding: '1rem', maxWidth: '800px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
       <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Language Exchange Topic Generator</h1>
+
       <div style={{ marginBottom: '1rem' }}>
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Categories</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-          {Object.keys(categories).map(category => (
-            <button
-              key={category}
-              onClick={() => toggleCategory(category)}
-              style={{
-                padding: '0.5rem',
-                border: '1px solid #ccc',
-                borderRadius: '0.25rem',
-                backgroundColor: categories[category] ? '#007bff' : 'white',
-                color: categories[category] ? 'white' : 'black',
-              }}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div style={{ marginBottom: '1rem' }}>
-        <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Levels</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-          {Object.keys(levels).map(level => (
+        <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Select Level</h2>
+        <div style={{ display: 'flex', gap: '0.5rem' }}>
+          {Object.keys(topicsData).map(level => (
             <button
               key={level}
-              onClick={() => toggleLevel(level)}
+              onClick={() => setSelectedLevel(level)}
               style={{
                 padding: '0.5rem',
                 border: '1px solid #ccc',
                 borderRadius: '0.25rem',
-                backgroundColor: levels[level] ? '#007bff' : 'white',
-                color: levels[level] ? 'white' : 'black',
+                backgroundColor: selectedLevel === level ? '#007bff' : 'white',
+                color: selectedLevel === level ? 'white' : 'black',
+                cursor: 'pointer',
               }}
             >
               {level}
@@ -89,6 +79,31 @@ const LanguageExchangeApp = () => {
           ))}
         </div>
       </div>
+
+      {selectedLevel && (
+        <div style={{ marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Categories</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {Object.keys(categories).map(category => (
+              <button
+                key={category}
+                onClick={() => toggleCategory(category)}
+                style={{
+                  padding: '0.5rem',
+                  border: '1px solid #ccc',
+                  borderRadius: '0.25rem',
+                  backgroundColor: categories[category] ? '#007bff' : 'white',
+                  color: categories[category] ? 'white' : 'black',
+                  cursor: 'pointer',
+                }}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center' }}>
         <span style={{ marginRight: '0.5rem' }}>English</span>
         <label style={{ position: 'relative', display: 'inline-block', width: '60px', height: '34px' }}>
@@ -147,8 +162,8 @@ const LanguageExchangeApp = () => {
 
       {currentTopic && (
         <div style={{ border: '1px solid #ccc', borderRadius: '0.25rem', padding: '1rem', marginBottom: '1rem' }}>
-          <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{currentTopic.category}</h2>
-          <p style={{ marginBottom: '0.5rem' }}>{isKoreanMode ? currentTopic.korean : currentTopic.english}</p>
+          <p style={{ fontSize: '0.875rem', color: '#666', marginBottom: '0.5rem' }}>{currentTopic.category}</p>
+          <p style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem' }}>{isKoreanMode ? currentTopic.korean : currentTopic.english}</p>
           <button
             onClick={() => setShowTranslation(!showTranslation)}
             style={{
