@@ -1,0 +1,394 @@
+{
+  "beginnerTopics": [
+    {
+      "category": "Life Story",
+      "questions": [
+        {
+          "english": "How would you describe yourself in three words (adjectives)?",
+          "korean": "당신을 세 단어(형용사)로 어떻게 설명하시겠습니까?"
+        },
+        {
+          "english": "Have you ever had a nickname? What was it?",
+          "korean": "별명이 있었나요? 무엇이었습니까?"
+        },
+        {
+          "english": "What gets worse and worse as you get older? What gets better and better?",
+          "korean": "나이가 들수록 무엇이 점점 나빠지나요? 무엇이 점점 좋아지나요?"
+        },
+        {
+          "english": "What do you like most about your personality?",
+          "korean": "당신의 성격 중 가장 좋아하는 점은 무엇인가요?"
+        },
+        {
+          "english": "What's the best thing about you?",
+          "korean": "당신의 가장 좋은 점은 무엇인가요?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "설명하다",
+          "english": "to describe"
+        },
+        {
+          "korean": "별명",
+          "english": "nickname"
+        },
+        {
+          "korean": "성격",
+          "english": "personality"
+        },
+        {
+          "korean": "최고",
+          "english": "best"
+        },
+        {
+          "korean": "나이 들다",
+          "english": "to get older"
+        },
+        {
+          "korean": "좋아지다",
+          "english": "to get better"
+        },
+        {
+          "korean": "나빠지다",
+          "english": "to get worse"
+        },
+        {
+          "korean": "장점",
+          "english": "strong point"
+        },
+        {
+          "korean": "단점",
+          "english": "weak point"
+        },
+        {
+          "korean": "특징",
+          "english": "characteristic"
+        }
+      ]
+    },
+    {
+      "category": "Daily Schedule",
+      "questions": [
+        {
+          "english": "What is a normal day for an adult in your culture?",
+          "korean": "당신의 문화에서 성인의 평범한 하루는 어떤가요?"
+        },
+        {
+          "english": "What does your normal day look like?",
+          "korean": "당신의 평범한 하루는 어떤가요?"
+        },
+        {
+          "english": "What time do people normally wake up and go to bed?",
+          "korean": "사람들은 보통 몇 시에 일어나고 잠자리에 드나요?"
+        },
+        {
+          "english": "Do you work on weekends? Is it normal for people to work on weekends?",
+          "korean": "주말에 일하시나요? 주말에 일하는 것이 일반적인가요?"
+        },
+        {
+          "english": "Are you an organized person? Why or why not? Do you want to change that?",
+          "korean": "당신은 체계적인 사람인가요? 왜 그런가요? 혹은 왜 아닌가요? 그것을 바꾸고 싶나요?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "평범한 하루",
+          "english": "normal day"
+        },
+        {
+          "korean": "일어나다",
+          "english": "to wake up"
+        },
+        {
+          "korean": "잠자리에 들다",
+          "english": "to go to bed"
+        },
+        {
+          "korean": "주말",
+          "english": "weekend"
+        },
+        {
+          "korean": "체계적",
+          "english": "organized"
+        },
+        {
+          "korean": "일과",
+          "english": "daily routine"
+        },
+        {
+          "korean": "출근하다",
+          "english": "to go to work"
+        },
+        {
+          "korean": "퇴근하다",
+          "english": "to leave work"
+        },
+        {
+          "korean": "일정",
+          "english": "schedule"
+        },
+        {
+          "korean": "습관",
+          "english": "habit"
+        }
+      ]
+    }
+  ],
+  "intermediateTopics": [
+    {
+      "category": "Friends and Dating",
+      "questions": [
+        {
+          "english": "Who was your first celebrity, movie, or TV crush?",
+          "korean": "당신의 첫 연예인, 영화 배우, 또는 TV 스타 짝사랑은 누구였나요?"
+        },
+        {
+          "english": "Can you give anyone advice on flirting with someone in your culture?",
+          "korean": "당신의 문화에서 누군가에게 호감을 표현하는 방법에 대해 조언을 해줄 수 있나요?"
+        },
+        {
+          "english": "What is dating like in your culture?",
+          "korean": "당신의 문화에서 데이트는 어떤가요?"
+        },
+        {
+          "english": "If someone moves to your country or city, how should they find new friends?",
+          "korean": "누군가 당신의 나라나 도시로 이사 온다면, 어떻게 새로운 친구를 사귀어야 할까요?"
+        },
+        {
+          "english": "What was the best date you ever went on?",
+          "korean": "지금까지 했던 데이트 중 가장 좋았던 데이트는 무엇인가요?"
+        },
+        {
+          "english": "What was the worst date you ever went on?",
+          "korean": "지금까지 했던 데이트 중 가장 최악의 데이트는 무엇인가요?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "유명인",
+          "english": "celebrity"
+        },
+        {
+          "korean": "짝사랑",
+          "english": "crush"
+        },
+        {
+          "korean": "호감 표현하다",
+          "english": "to flirt"
+        },
+        {
+          "korean": "데이트",
+          "english": "date"
+        },
+        {
+          "korean": "친구",
+          "english": "friend"
+        },
+        {
+          "korean": "연애",
+          "english": "romantic relationship"
+        },
+        {
+          "korean": "소개팅",
+          "english": "blind date"
+        },
+        {
+          "korean": "고백하다",
+          "english": "to confess feelings"
+        },
+        {
+          "korean": "사귀다",
+          "english": "to date (someone)"
+        },
+        {
+          "korean": "썸 타다",
+          "english": "to have a mutual attraction"
+        }
+      ]
+    },
+    {
+      "category": "Food",
+      "questions": [
+        {
+          "english": "What was the most interesting restaurant you've ever been to?",
+          "korean": "가 본 식당 중 가장 흥미로웠던 곳은 어디인가요?"
+        },
+        {
+          "english": "What are your first memories of eating a 'foreign' food? What was it, why did you try it, and what did you think?",
+          "korean": "'외국' 음식을 처음 먹었던 기억은 무엇인가요? 그게 무엇이었고, 왜 먹어봤으며, 어떻게 생각했나요?"
+        },
+        {
+          "english": "What was your favorite food when you were a small child? How do you feel about that now?",
+          "korean": "어렸을 때 가장 좋아했던 음식은 무엇이었나요? 지금은 그 음식에 대해 어떻게 생각하나요?"
+        },
+        {
+          "english": "What was the most interesting food you've ever eaten?",
+          "korean": "지금까지 먹어본 음식 중 가장 흥미로웠던 것은 무엇인가요?"
+        },
+        {
+          "english": "What's the spiciest food you've ever eaten? How did it go?",
+          "korean": "지금까지 먹어본 음식 중 가장 매웠던 것은 무엇인가요? 어땠나요?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "식당",
+          "english": "restaurant"
+        },
+        {
+          "korean": "외국 음식",
+          "english": "foreign food"
+        },
+        {
+          "korean": "가장 좋아하는 음식",
+          "english": "favorite food"
+        },
+        {
+          "korean": "맵다",
+          "english": "spicy"
+        },
+        {
+          "korean": "흥미롭다",
+          "english": "interesting"
+        },
+        {
+          "korean": "맛있다",
+          "english": "delicious"
+        },
+        {
+          "korean": "맛없다",
+          "english": "not tasty"
+        },
+        {
+          "korean": "요리하다",
+          "english": "to cook"
+        },
+        {
+          "korean": "식사",
+          "english": "meal"
+        },
+        {
+          "korean": "재료",
+          "english": "ingredient"
+        }
+      ]
+    }
+  ],
+  "advancedTopics": [
+    {
+      "category": "Technology",
+      "questions": [
+        {
+          "english": "Does artificial intelligence pose a security threat to humans? Why or why not?",
+          "korean": "인공지능이 인간에게 보안 위협이 될 수 있을까요? 왜 그렇게 생각하나요?"
+        },
+        {
+          "english": "If you were in a foreign city and your phone stopped working, how would you get back home?",
+          "korean": "외국 도시에서 휴대폰이 작동을 멈췄다면, 어떻게 집으로 돌아가시겠습니까?"
+        },
+        {
+          "english": "Should politicians who don't know how to troubleshoot their own computer problems be allowed to regulate technology? Why or why not?",
+          "korean": "자신의 컴퓨터 문제를 해결할 줄 모르는 정치인들이 기술을 규제할 수 있어야 할까요? 왜 그렇게 생각하나요?"
+        },
+        {
+          "english": "Have tech companies like Google, Microsoft, or Facebook shown us that they can be trusted? If yes, how and what should be done to protect their autonomy? If no, why not and who should regulate them?",
+          "korean": "Google, Microsoft, Facebook 같은 기술 회사들이 신뢰할 수 있다는 것을 보여주었나요? 그렇다면, 어떻게 그들의 자율성을 보호해야 할까요? 그렇지 않다면, 왜 그렇고 누가 그들을 규제해야 할까요?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "인공지능",
+          "english": "artificial intelligence"
+        },
+        {
+          "korean": "보안 위협",
+          "english": "security threat"
+        },
+        {
+          "korean": "문제 해결하다",
+          "english": "to troubleshoot"
+        },
+        {
+          "korean": "규제하다",
+          "english": "to regulate"
+        },
+        {
+          "korean": "자율성",
+          "english": "autonomy"
+        },
+        {
+          "korean": "기술 혁신",
+          "english": "technological innovation"
+        },
+        {
+          "korean": "개인정보 보호",
+          "english": "privacy protection"
+        },
+        {
+          "korean": "사이버 보안",
+          "english": "cybersecurity"
+        },
+        {
+          "korean": "빅데이터",
+          "english": "big data"
+        },
+        {
+          "korean": "디지털 격차",
+          "english": "digital divide"
+        }
+      ]
+    },
+    {
+      "category": "Self-care and Growth",
+      "questions": [
+        {
+          "english": "If you had an extra free hour every day, what would you do?",
+          "korean": "매일 한 시간의 여유 시간이 더 있다면, 무엇을 하시겠습니까?"
+        },
+        {
+          "english": "If money were no issue, how would you spend your time?",
+          "korean": "돈이 문제가 되지 않는다면, 시간을 어떻게 보내시겠습니까?"
+        },
+        {
+          "english": "Where do you see yourself in 5 years?",
+          "korean": "5년 후의 자신의 모습을 어떻게 상상하십니까?"
+        },
+        {
+          "english": "In what areas of your life do you have the highest hopes in the future? In what areas in your life do you have the lowest hopes for in the future?",
+          "korean": "미래에 대해 가장 큰 희망을 가지고 있는 삶의 영역은 무엇입니까? 가장 낮은 희망을 가지고 있는 삶의 영역은 무엇입니까?"
+        }
+      ],
+      "koreanVocabulary": [
+        {
+          "korean": "자기 관리",
+          "english": "self-care"
+        },
+        {
+          "korean": "개인 성장",
+          "english": "personal growth"
+        },
+        {
+          "korean": "목표 설정하다",
+          "english": "to set goals"
+        },
+        {
+          "korean": "자아실현",
+          "english": "self-realization"
+        },
+        {
+          "korean": "마인드풀니스",
+          "english": "mindfulness"
+        },
+        {
+          "korean": "스트레스 해소하다",
+          "english": "to relieve stress"
+        },
+        {
+          "korean": "자신감",
+          "english": "self-confidence"
+        }
+      ]
+    }
+  ]
+}
